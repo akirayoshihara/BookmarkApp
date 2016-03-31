@@ -5,4 +5,4 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   #追加
   has_many :bookmarks
-end
+end 
