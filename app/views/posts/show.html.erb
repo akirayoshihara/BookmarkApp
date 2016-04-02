@@ -6,14 +6,6 @@
   <% end %>
 </p>
 
-<!--リンク先を設定。remote: :trueも設定。-->
-<p>
-  <%= link_to post_bookmarks_toggle_path(@post) , id: 'bookmark-link', remote: true do %>
-      <!--変更-->
-      <%=raw bookmark_icon(@post, current_user) %>
-  <% end %>
-</p>
-
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -22,6 +14,15 @@
 <p>
   <strong>Body:</strong>
   <%= @post.body %>
+</p>
+
+
+<!--リンク先を設定。remote: :trueも設定。-->
+<p>
+  <%= link_to post_bookmarks_toggle_path(@post) , id: 'bookmark-link', remote: true do %>
+      <!--変更-->
+      <%=raw bookmark_icon(@post, current_user) %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
